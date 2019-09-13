@@ -1,4 +1,5 @@
 import React from 'react';
+import { JoshAppView } from './JoshAppView';
 
 type idk = {
     count: number
@@ -33,6 +34,8 @@ class IntakeAppContainer extends React.Component<idk, any> {
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
             Click me
         </button>
+
+        <JoshAppView />
         </div>
       );
     }
