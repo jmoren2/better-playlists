@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 type idk = {
     count: number
@@ -9,9 +9,19 @@ class IntakeAppContainer extends React.Component<idk, any> {
     constructor(props: idk) {
       super(props);
       this.state = {
-        count: 0
+        count: props.count 
       };
     }
+
+    componentDidMount()
+    {
+        this.setState(
+                {
+                    count: this.state.count + 1
+                }
+        );
+    }
+
   
     render() {
         

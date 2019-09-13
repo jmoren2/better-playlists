@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import IntakeAppContainer from '../src/IntakeAppContainer';
 import { urlPaths } from './utils/urlPaths';
@@ -13,11 +12,10 @@ export class App extends React.Component
 
     // If the user hit Reload (or browses straight to) on one of the steps that relies on context data being in a certian shape,
     // then the context data won't be in that shape yet, so redirect to the first Mobile Intake home screen instead
-    if (window.location.pathname !== urlPaths.INTAKE &&
-      window.location.pathname !== urlPaths.INTAKE_WHERE &&
-      window.location.pathname !== urlPaths.INTAKE_FOLLOWUP
+    if (window.location.pathname !== urlPaths.HOME 
+      && window.location.pathname !== urlPaths.JOSH_SITE
     ) {
-      window.location.href = urlPaths.INTAKE
+      window.location.href = urlPaths.JOSH_SITE
       this.isRedirecting = true
     }
   }
@@ -32,7 +30,7 @@ export class App extends React.Component
     }
 
     return (
-      <IntakeAppContainer count={1} />
+      <IntakeAppContainer count={2} />
     )
   }
   // render(){
