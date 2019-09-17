@@ -18,7 +18,7 @@ export const HomeRoute = (props: any) => {
   function HandleChange(event: any)
   {
       setWords(event.target.value);
-  }
+  };
   
       return (
           <HomeView words={words} setWords={HandleChange}  handleNextClick={handleNextClick} />
