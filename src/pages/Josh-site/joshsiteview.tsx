@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 interface IProps {
   handleNextClick: () => void
@@ -7,7 +8,13 @@ interface IProps {
 const JoshSiteView = (props: IProps) => (
   <>
      <div>
-        <button onClick={props.handleNextClick}> Josh View!!!   </button>  
+       <div>
+         welcome!
+       </div>
+        
+     <Link to="/home">
+            <button className='btn btn-info'>Type pls</button>
+        </Link>
      </div>
     
   </>

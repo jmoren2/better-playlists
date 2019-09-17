@@ -1,5 +1,6 @@
 import React from 'react';
 import { JoshAppView } from './JoshAppView';
+import { Redirect } from 'react-router-dom'
 
 type idk = {
     count: number
@@ -10,7 +11,8 @@ class IntakeAppContainer extends React.Component<idk, any> {
     constructor(props: idk) {
       super(props);
       this.state = {
-        count: props.count 
+        count: props.count ,
+        redirect: false
       };
     }
 
@@ -23,22 +25,27 @@ class IntakeAppContainer extends React.Component<idk, any> {
         );
     }
 
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to='/josh' />
+        }
+      }
+
   
     render() {
         
       return (
         <div>
-          <p>You clicked <span style={{color: 'red'}}>{this.state.count}</span> times</p>
-          
-            
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-            Click me
-        </button>
-
-        <JoshAppView />
+            <JoshAppView />
         </div>
       );
     }
   }
 
   export default IntakeAppContainer;
+

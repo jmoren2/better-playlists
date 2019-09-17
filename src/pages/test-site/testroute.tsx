@@ -1,6 +1,6 @@
 import React from 'react'
 import { urlPaths } from '../../utils/urlPaths'
-import JoshSiteView from '../Josh-site/joshsiteview'
+import TestView from '../test-site/testview'
 
 declare const Global: any
 
@@ -8,15 +8,15 @@ interface IProps {
   history?: any
 }
 
-export const JoshSiteRoute = (props: IProps) => {
+export const TestRoute = (props: IProps) => {
 
     const handleNextClick = async () => {
-        props.history.push(urlPaths.HOME)
+        props.history.push(urlPaths.JOSH_SITE)
       }
 
 
       return (
-        <JoshSiteView
+        <TestView
           handleNextClick={handleNextClick}
         />
       )

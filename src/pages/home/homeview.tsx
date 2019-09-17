@@ -1,13 +1,19 @@
-import * as React from 'react'
+import React from 'react'
 
 
-const HomeView = (props: any) => (
+export const HomeView = (props: any) => (
   <>
-     <div>
-       <button onClick={props.handleNextClick}>HOME VIEW! </button>
-     </div>
-    
-  </>
+  <div>
+      <input value={props.words} onChange={props.setWords} />
+      <p style={{color: 'red'}}>
+        {props.words}
+      </p>
+      <button onClick={props.handleNextClick}>Back demon</button>
+  </div>
+</>
+
 )
+  
+    
 
 export default HomeView;

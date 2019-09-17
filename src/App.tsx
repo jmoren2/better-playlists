@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import IntakeAppContainer from '../src/IntakeAppContainer';
 import { urlPaths } from './utils/urlPaths';
-import JoshSiteView from './pages/Josh-site/joshsiteview';
+
 
 interface IProps {
   handleNextClick: () => void
@@ -37,19 +37,10 @@ export class App extends React.Component
 
     return (
        <div className="App">
-         <header className="App-header">
-           <p>
-           sup! :)
-           </p>
-
-           
-        
-         <IntakeAppContainer count={0} />
-         
-         </header>
-         
-         
-         </div>
+          <header className="App-header">
+              <IntakeAppContainer count={0} />
+          </header>
+       </div>
     )
   }
 
