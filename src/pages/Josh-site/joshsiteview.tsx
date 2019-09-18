@@ -12,9 +12,9 @@ const JoshSiteView = (props: IProps) => (
          welcome to the second page!
        </div>
         
-     <Link to="/home">
-            <button className='btn btn-info'>Type pls</button>
-        </Link>
+       <Link to="/home">
+          <button className='btn btn-info'>Type pls</button>
+       </Link>
      </div>
     
   </>
