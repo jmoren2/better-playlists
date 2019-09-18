@@ -9,7 +9,7 @@ const JoshSiteView = (props: IProps) => (
   <>
      <div>
        <div>
-         welcome!
+         welcome to the second page!
        </div>
         
      <Link to="/home">
